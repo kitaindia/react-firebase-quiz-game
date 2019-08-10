@@ -22,8 +22,8 @@ class AnsPoll extends Component {
             <div>
                 <h1>回答結果: {currentQuiz.text}</h1>
                 <Chart chartType="BarChart" graph_id="BarChart"
-                    data = {pollData}
-                    options = {{
+                    data={pollData}
+                    options={{
                     backgroundColor: "transparent",
                     legend: {
                         'position': 'none'
@@ -44,8 +44,8 @@ class AnsPoll extends Component {
                         }
                     }
                 }}
-                width = {window.innerWidth * 0.8}
-                height = {window.innerHeight * 0.6}/>
+                width={window.innerWidth * 0.8}
+                height={window.innerHeight * 0.6}/>
             </div>
         )
     }

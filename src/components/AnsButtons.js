@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import Constants from '../utils/Constants'
-import {connect} from 'react-redux'
-import {initSelectedAnsNum, addSecound} from '../actions'
 import {firebaseDB} from '../firebase/'
 
 // 回答画面
@@ -31,17 +29,17 @@ class AnsButtons extends Component {
     render() {
         const {name, globalStatus, currentQuiz} = this.props
         const selectedAnsNum = this.state ? this.state.selectedAnsNum : -1
-        const isButtonActive = (globalStatus.step == Constants.steps.ANSWER_TIME)
+        const isButtonActive = (globalStatus.step === Constants.steps.ANSWER_TIME)
 
         const ansButtons = [1, 2, 3, 4].map((ansNum) =>
             <input type="button"
-                className = {
-                  "ansBtn " + (ansNum % 2 == 1 ? 'fLeft ' : 'fRight ') +
+                className={
+                  "ansBtn " + (ansNum % 2 === 1 ? 'fLeft ' : 'fRight ') +
                   (isButtonActive ? "" : "disabled ") +
-                  (selectedAnsNum == ansNum ? "selected" : "")}
-                value = {ansNum}
-                disabled = {isButtonActive ? "" : "disabled"}
-                onClick = {() => this.onAnsSelected(ansNum, globalStatus.currentQuizIndex, name)}/>)
+                  (selectedAnsNum === ansNum ? "selected" : "")}
+                value={ansNum}
+                disabled={isButtonActive ? "" : "disabled"}
+                onClick={() => this.onAnsSelected(ansNum, globalStatus.currentQuizIndex, name)}/>)
 
         return (
             <div>

@@ -1,5 +1,4 @@
-import React, {Component, PropTypes} from "react"
-import {bindActionCreators} from 'redux'
+import React, {Component} from "react"
 import {connect} from 'react-redux'
 import {AnsList, AnsDisplay, AnsPoll, Ranking, TitleDisplay} from '../components'
 import {Constants} from '../utils'
@@ -14,21 +13,21 @@ class Screen extends Component {
 
         return (
             <div className="screenFrame">
-                {(currentStep == Constants.steps.BEFORE_GAME) &&
+                {(currentStep === Constants.steps.BEFORE_GAME) &&
                     <TitleDisplay/>}
-                {(currentStep == Constants.steps.ANSWER_TIME) &&
+                {(currentStep === Constants.steps.ANSWER_TIME) &&
                     <AnsList
-                      currentQuiz = {currentQuiz}/>}
-                {(currentStep == Constants.steps.SHOW_POLL) &&
+                      currentQuiz={currentQuiz}/>}
+                {(currentStep === Constants.steps.SHOW_POLL) &&
                     <AnsPoll
-                        currentQuiz = {currentQuiz}
-                        quizIndex = {globalStatus.currentQuizIndex}/>}
-                {(currentStep == Constants.steps.SHOW_ANSWER) &&
+                        currentQuiz={currentQuiz}
+                        quizIndex={globalStatus.currentQuizIndex}/>}
+                {(currentStep === Constants.steps.SHOW_ANSWER) &&
                     <AnsDisplay
-                        currentQuiz = {currentQuiz}/>}
-                {(currentStep == Constants.steps.SHOW_RANKING) &&
+                        currentQuiz={currentQuiz}/>}
+                {(currentStep === Constants.steps.SHOW_RANKING) &&
                     <Ranking
-                        quizzes = {quizzes}/>}
+                        quizzes={quizzes}/>}
             </div>
         )
     }

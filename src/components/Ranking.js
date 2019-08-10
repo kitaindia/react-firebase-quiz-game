@@ -22,8 +22,8 @@ class Ranking extends Component {
             <div>
                 <h1>総合順位</h1>
                 <Chart chartType="BarChart" graph_id="BarChart"
-                    data = {rankingData}
-                    options = {{
+                    data={rankingData}
+                    options={{
                         backgroundColor: "transparent",
                         legend: {
                             'position': 'none'
@@ -46,8 +46,8 @@ class Ranking extends Component {
                         },
                         isStacked: true
                     }}
-                    width = {window.innerWidth * 0.7}
-                    height = {window.innerHeight * 0.7}/>
+                    width={window.innerWidth * 0.7}
+                    height={window.innerHeight * 0.7}/>
             </div>
         )
     }

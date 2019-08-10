@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from "react"
+import React, {Component } from "react"
 import {connect} from 'react-redux'
 import {RegForm, AnsButtons} from '../components'
 import {Constants} from '../utils'
@@ -25,12 +25,12 @@ class SmartDevice extends Component {
             <div className="smartDeviceFrame">
                 {!name &&
                     <RegForm
-                        onRegister = {this.onRegister.bind(this)}/>}
+                        onRegister={this.onRegister.bind(this)}/>}
                 {name &&
                     <AnsButtons
-                        name = {name}
-                        globalStatus = {globalStatus}
-                        currentQuiz = {currentQuiz}/>}
+                        name={name}
+                        globalStatus={globalStatus}
+                        currentQuiz={currentQuiz}/>}
             </div>
         )
     }

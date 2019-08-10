@@ -12,10 +12,10 @@ class RegForm extends Component {
                 <form action="">
                     <h2 className="formName">お名前</h2>
                     <input type="text"
-                        ref = {node => {input = node}}/>
+                        ref={node => {input = node}}/>
                     <br/>
                     <input className="regBtn" type="button" value="登録"
-                        onClick = {() => onRegister(input.value)}/>
+                        onClick={() => onRegister(input.value)}/>
                 </form>
             </div>
         )

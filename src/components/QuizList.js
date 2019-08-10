@@ -6,9 +6,9 @@ class QuizList extends Component{
     const quizList = quizzes.map((quiz, index) =>
             <div>
                 <input type="radio"
-                    onChange = {() => onQuizSelected(index)}
-                    checked = {index == globalStatus.currentQuizIndex}
-                    value = {index}/>
+                    onChange={() => onQuizSelected(index)}
+                    checked={index === globalStatus.currentQuizIndex}
+                    value={index}/>
                 {quiz.text}
             </div>
         )

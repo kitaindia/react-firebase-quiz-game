@@ -1,5 +1,4 @@
 import {firebaseDB} from '../firebase/'
-import {Constants} from '../utils'
 
 function loadQuizzes() {
     return dispatch => {

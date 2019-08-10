@@ -1,9 +1,7 @@
-import React, {Component, PropTypes} from "react"
-import {bindActionCreators} from 'redux'
+import React, {Component} from "react"
 import {connect} from 'react-redux'
 import {selectQuiz, selectStep} from '../actions'
 import {QuizList, StepList} from '../components'
-import Constants from '../utils/Constants'
 
 // ゲーム進行の操作用のコンテナ
 class Controller extends Component {
@@ -14,12 +12,12 @@ class Controller extends Component {
         return (
             <div className="screenFrame">
                 {<StepList
-                    globalStatus = {globalStatus}
-                    onStepSelected = {this.onStepSelected.bind(this)}/>}
+                    globalStatus={globalStatus}
+                    onStepSelected={this.onStepSelected.bind(this)}/>}
                 {<QuizList
-                    globalStatus = {globalStatus}
-                    quizzes = {quizzes}
-                    onQuizSelected = {this.onQuizSelected.bind(this)}/>}
+                    globalStatus={globalStatus}
+                    quizzes={quizzes}
+                    onQuizSelected={this.onQuizSelected.bind(this)}/>}
             </div>
         )
     }

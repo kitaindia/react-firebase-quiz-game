@@ -8,9 +8,9 @@ class StepList extends Component {
         Object.keys(Constants.steps).forEach((key) =>
             stepList.push(
                 <input type="button"
-                    className = {globalStatus.step == Constants.steps[key] ? "selectedStep" : ""}
-                    value = {this.getStepText(Constants.steps[key])}
-                    onClick = {() => onStepSelected(Constants.steps[key])}/>
+                    className={globalStatus.step === Constants.steps[key] ? "selectedStep" : ""}
+                    value={this.getStepText(Constants.steps[key])}
+                    onClick={() => onStepSelected(Constants.steps[key])}/>
             )
         )
 

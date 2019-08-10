@@ -5,7 +5,7 @@ class AnsList extends Component {
     render() {
         const {currentQuiz} = this.props
         const ansList = currentQuiz ? currentQuiz.answers.map((ansText, index) =>
-            <li key = {index}>
+            <li key={index}>
                 {ansText}
             </li>) : null
 
