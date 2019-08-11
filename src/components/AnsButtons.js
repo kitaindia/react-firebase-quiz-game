@@ -6,13 +6,9 @@ import {firebaseDB} from '../firebase/'
 class AnsButtons extends Component {
 
     getMessage(step, selectedAnsNum, quiz) {
-        if (selectedAnsNum > 0) {
-            return selectedAnsNum + ". 「" + quiz.answers[selectedAnsNum - 1] + "」に回答しました"
-        }
-
         switch (step) {
             case Constants.steps.ANSWER_TIME:
-                return '回答してください'
+                return quiz && quiz.text;
 
             default:
                 return '現在回答できません'
