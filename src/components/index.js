@@ -1,23 +1,10 @@
-import AnsButtons from './AnsButtons'
-import AnsList from './AnsList'
-import AnsDisplay from './AnsDisplay'
-import AnsPoll from './AnsPoll'
-import Ranking from './Ranking'
-import TitleDisplay from './TitleDisplay'
-import RegForm from './RegForm'
-import StepList from './StepList'
-import QuizList from './QuizList'
-import NotFound from './NotFound'
-
-module.exports = {
-    AnsButtons,
-    AnsList,
-    AnsDisplay,
-    AnsPoll,
-    Ranking,
-    TitleDisplay,
-    RegForm,
-    StepList,
-    QuizList,
-    NotFound
-}
+export { default as AnsButtons } from './AnsButtons';
+export { default as AnsList } from './AnsList';
+export { default as AnsDisplay } from './AnsDisplay';
+export { default as AnsPoll } from './AnsPoll';
+export { default as Ranking } from './Ranking';
+export { default as TitleDisplay } from './TitleDisplay';
+export { default as RegForm } from './RegForm';
+export { default as StepList } from './StepList';
+export { default as QuizList } from './QuizList';
+export { default as NotFound } from './NotFound';

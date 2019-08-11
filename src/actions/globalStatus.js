@@ -1,7 +1,7 @@
 import {firebaseDB} from '../firebase/'
 const statusRef = firebaseDB.ref('globalStatus')
 
-function syncGlobalStatus() {
+export function syncGlobalStatus() {
     return dispatch => {
         statusRef.on('value', function(snapshot) {
             dispatch(loadGlobalStatusSuccess(snapshot))
@@ -16,7 +16,7 @@ function loadGlobalStatusSuccess(snapshot) {
     }
 }
 
-function selectQuiz(index) {
+export function selectQuiz(index) {
     const newStatus = {
         currentQuizIndex: index,
         step: 1
@@ -28,7 +28,7 @@ function selectQuiz(index) {
     }
 }
 
-function selectStep(stepNum) {
+export function selectStep(stepNum) {
     const newStatus = {
         step: stepNum
     }
@@ -38,10 +38,4 @@ function selectStep(stepNum) {
         type: 'SELECT_STEP',
         data: stepNum
     }
-}
-
-module.exports = {
-    syncGlobalStatus,
-    selectQuiz,
-    selectStep
 }

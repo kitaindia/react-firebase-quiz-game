@@ -1,7 +1,2 @@
-import globalStatus from './globalStatus'
-import quizzes from './quizzes'
-
-module.exports = {
-    ...globalStatus,
-    ...quizzes
-}
+export { syncGlobalStatus, selectQuiz, selectStep } from './globalStatus'
+export { default as loadQuizzes } from './quizzes'
