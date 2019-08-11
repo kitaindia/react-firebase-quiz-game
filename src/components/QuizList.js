@@ -4,12 +4,15 @@ class QuizList extends Component{
   render() {
     const {globalStatus, quizzes, onQuizSelected} = this.props
     const quizList = quizzes.map((quiz, index) =>
-            <div>
-                <input type="radio"
+            <div key={index}>
+                <input
+                    id={index}
+                    type="radio"
                     onChange={() => onQuizSelected(index)}
                     checked={index === globalStatus.currentQuizIndex}
-                    value={index}/>
-                {quiz.text}
+                    value={index}
+                />
+                <label htmlFor={index}>{quiz.text}</label>
             </div>
         )
 

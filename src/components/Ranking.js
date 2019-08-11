@@ -15,13 +15,13 @@ class Ranking extends Component {
 
     render() {
         const {quizzes} = this.props
-        const answers = this.state ? this.state.answers : []
-        const rankingData = answers ? ChartUtils.createRanking(answers, quizzes) : []
+        const answers = this.state ? this.state.answers : null
+        const rankingData = answers ? ChartUtils.createRanking(answers, quizzes) : null
 
         return (
             <div>
                 <h1>総合順位</h1>
-                <Chart chartType="BarChart" graph_id="BarChart"
+                {rankingData && <Chart chartType="BarChart" graph_id="BarChart"
                     data={rankingData}
                     options={{
                         backgroundColor: "transparent",
@@ -47,7 +47,7 @@ class Ranking extends Component {
                         isStacked: true
                     }}
                     width={window.innerWidth * 0.7}
-                    height={window.innerHeight * 0.7}/>
+                    height={window.innerHeight * 0.7}/>}
             </div>
         )
     }
