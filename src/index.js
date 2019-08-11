@@ -8,14 +8,17 @@ import thunk from 'redux-thunk'
 import {createLogger} from 'redux-logger'
 import routes from './routes'
 import reducers from './reducers'
+import { CookiesProvider } from 'react-cookie';
 
 const logger = createLogger()
 const store = createStore(reducers, {}, applyMiddleware(thunk, logger))
 const history = syncHistoryWithStore(browserHistory, store)
 
 render(
-    <Provider store={store}>
-        <Router history={history} routes={routes}/>
-    </Provider>,
+    <CookiesProvider>
+        <Provider store={store}>
+            <Router history={history} routes={routes}/>
+        </Provider>
+    </CookiesProvider>,
     document.getElementById('root')
 )
