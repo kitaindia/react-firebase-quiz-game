@@ -1,7 +1,3 @@
-import Constants from './Constants'
-import ChartUtils from './ChartUtils'
+export { default as Constants } from './Constants';
+export { default as ChartUtils } from './ChartUtils';
 
-module.exports = {
-    Constants,
-    ChartUtils
-}

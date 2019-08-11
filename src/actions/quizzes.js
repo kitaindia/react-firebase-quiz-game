@@ -1,6 +1,6 @@
 import {firebaseDB} from '../firebase/'
 
-function loadQuizzes() {
+export function loadQuizzes() {
     return dispatch => {
         firebaseDB.ref('quizzes').once('value', function(snapshot) {
             dispatch(loadQuizzesSuccess(snapshot))
@@ -15,6 +15,4 @@ function loadQuizzesSuccess(snapshot) {
     }
 }
 
-module.exports = {
-    loadQuizzes
-}
+export default loadQuizzes;
