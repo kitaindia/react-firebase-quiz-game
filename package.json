@@ -6,7 +6,7 @@
         "react-scripts": "0.8.5"
     },
     "dependencies": {
-        "firebase": "3.6.8",
+        "firebase": "6.3.5",
         "history": "4.9.0",
         "react": "16.9.0",
         "react-cookie": "1.0.4",
