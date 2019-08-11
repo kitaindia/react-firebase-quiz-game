@@ -32,7 +32,7 @@ class AnsButtons extends Component {
         const isButtonActive = (globalStatus.step === Constants.steps.ANSWER_TIME)
 
         const ansButtons = [1, 2, 3, 4].map((ansNum) =>
-            <input type="button"
+            <input key={ansNum} type="button"
                 className={
                   "ansBtn " + (ansNum % 2 === 1 ? 'fLeft ' : 'fRight ') +
                   (isButtonActive ? "" : "disabled ") +

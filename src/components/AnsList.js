@@ -12,8 +12,8 @@ class AnsList extends Component {
         return (
             <div>
                 {ansList && [
-                    < h1 > Q. {currentQuiz.text}< /h1>,
-                    <ol><h2>{ansList}</h2></ol>
+                    <h1 key="ansTitle"> Q. {currentQuiz.text}</h1>,
+                    <ol key="ansList"><h2>{ansList}</h2></ol>
                 ]}
             </div>
         )
