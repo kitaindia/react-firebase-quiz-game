@@ -3,14 +3,15 @@ class ChartUtils {
 
     // 引数として与えられたクイズの、各選択肢の回答者数をまとめる
     static createPoll(answers, quizIndex, quiz) {
-        let data = quiz.answers.map(function(ansText, index) {
+        console.log(quiz);
+        let data = quiz.answers.map(function(answer, index) {
             let ansCount = 0
             Object.keys(answers).forEach(function(key) {
                 let answerer = answers[key]
                 if (answerer[quizIndex] === index) ansCount += 1
             })
 
-            const text = (index + 1) + ". " + ansText + " " + ansCount + "人"
+            const text = (index + 1) + ". " + answer.text + " " + ansCount + "人"
             return [text, ansCount, "#87CEEB"];
         })
 

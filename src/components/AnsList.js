@@ -4,16 +4,16 @@ import React, {Component} from 'react'
 class AnsList extends Component {
     render() {
         const {currentQuiz} = this.props
-        const ansList = currentQuiz ? currentQuiz.answers.map((ansText, index) =>
+        const ansList = currentQuiz ? currentQuiz.answers.map((answer, index) =>
             <input
                 className={
                   "screenPanel ansBtn " + ((index + 1) % 2 === 1 ? 'fLeft ' : 'fRight ')
                 }
                 key={index}
-                value={`${index + 1}. ${ansText}`}
+                value={`${index + 1}. ${answer.text}`}
                 type="button"
                 style={{
-                    backgroundImage: "url('')",
+                    backgroundImage: "url(" + answer.image + ")",
                     backgroundSize: "cover"
                 }}
             />) : null;

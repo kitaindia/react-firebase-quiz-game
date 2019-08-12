@@ -1,0 +1,30 @@
+{
+  "quizzes" : [ null, {
+    "ansIndex" : 1,
+    "answers" : [
+      {
+        "text": "北海道",
+        "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-quiz-game001.appspot.com/o/1_1.jpg?alt=media&token=2c40809a-b7e3-4a83-9aa9-0c34cfa31c20"
+      },
+      {
+        "text": "東京都",
+        "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-quiz-game001.appspot.com/o/1_2.jpg?alt=media&token=1d58a134-6755-456f-90ca-c96cb9161529"
+      },
+      {
+        "text": "京都府",
+        "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-quiz-game001.appspot.com/o/1_3.png?alt=media&token=96d650e2-a641-4b67-9ae5-d2dac6cf77c5"
+      },
+      {
+        "text": "沖縄県",
+        "image": "https://firebasestorage.googleapis.com/v0/b/react-firebase-quiz-game001.appspot.com/o/1_4.jpg?alt=media&token=03451f5d-e404-4617-a97d-b586191e9d94"
+      }
+    ],
+    "text" : "新婦の出身地は？"
+  }],
+  "globalStatus" : {
+    "currentQuizIndex" : 1,
+    "step" : -1
+  },
+  "answers" : {
+  }
+}
