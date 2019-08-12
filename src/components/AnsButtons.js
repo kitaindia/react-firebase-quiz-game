@@ -30,7 +30,7 @@ class AnsButtons extends Component {
         const ansButtons = [1, 2, 3, 4].map((ansNum) =>
             <input key={ansNum} type="button"
                 className={
-                  "ansBtn " + (ansNum % 2 === 1 ? 'fLeft ' : 'fRight ') +
+                  "panel ansBtn " + (ansNum % 2 === 1 ? 'fLeft ' : 'fRight ') +
                   (isButtonActive ? "" : "disabled ") +
                   (selectedAnsNum === ansNum ? "selected" : "")}
                 value={ansNum}
