@@ -5,9 +5,18 @@ class AnsList extends Component {
     render() {
         const {currentQuiz} = this.props
         const ansList = currentQuiz ? currentQuiz.answers.map((ansText, index) =>
-            <li key={index}>
-                {ansText}
-            </li>) : null
+            <input
+                className={
+                  "screenPanel ansBtn " + ((index + 1) % 2 === 1 ? 'fLeft ' : 'fRight ')
+                }
+                key={index}
+                value={`${index + 1}. ${ansText}`}
+                type="button"
+                style={{
+                    backgroundImage: "url('')",
+                    backgroundSize: "cover"
+                }}
+            />) : null;
 
         return (
             <div>

@@ -6,13 +6,9 @@ import {firebaseDB} from '../firebase/'
 class AnsButtons extends Component {
 
     getMessage(step, selectedAnsNum, quiz) {
-        if (selectedAnsNum > 0) {
-            return selectedAnsNum + ". 「" + quiz.answers[selectedAnsNum - 1] + "」に回答しました"
-        }
-
         switch (step) {
             case Constants.steps.ANSWER_TIME:
-                return '回答してください'
+                return quiz && quiz.text;
 
             default:
                 return '現在回答できません'
@@ -34,7 +30,7 @@ class AnsButtons extends Component {
         const ansButtons = [1, 2, 3, 4].map((ansNum) =>
             <input key={ansNum} type="button"
                 className={
-                  "ansBtn " + (ansNum % 2 === 1 ? 'fLeft ' : 'fRight ') +
+                  "panel ansBtn " + (ansNum % 2 === 1 ? 'fLeft ' : 'fRight ') +
                   (isButtonActive ? "" : "disabled ") +
                   (selectedAnsNum === ansNum ? "selected" : "")}
                 value={ansNum}
