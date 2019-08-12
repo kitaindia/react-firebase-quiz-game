@@ -15,7 +15,9 @@ class AnsPoll extends Component {
 
     render() {
         const {currentQuiz, quizIndex} = this.props
-        const answers = this.state ? this.state.answers : []
+        const answers = this.state ? this.state.answers : [];
+
+        if (!currentQuiz) return null;
         const pollData = ChartUtils.createPoll(answers, quizIndex, currentQuiz)
 
         return (
