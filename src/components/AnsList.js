@@ -1,9 +1,17 @@
 import React, {Component} from 'react'
 
+const number = (index) => {
+    const numText = ['①', '②', '③', '④'][index];
+    return (
+        <p className={`num${index}`}>{numText}</p>
+    );
+}
+
 const ansRow = (answer, index) => {
     return (
         <div className={"screenPanel ansBtn " + ((index + 1) % 2 === 1 ? 'fLeft ' : 'fRight ')}>
             <img src={answer.image} alt={answer.text} />
+            {number(index)}
             <p　className="choice">{answer.text}</p>
         </div>
     );

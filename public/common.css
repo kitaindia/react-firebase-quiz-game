@@ -116,7 +116,39 @@ input[type=text] {
     max-width: inherit;
 }
 
-.screenPanel p {
+.screenPanel p.num0 {
+    position: absolute;
+    background-color: black;
+    color: cyan;
+    top: -40px;
+    left: 10px;
+}
+
+.screenPanel p.num1 {
+    position: absolute;
+    background-color: black;
+    color: red;
+    top: -40px;
+    left: 10px;
+}
+
+.screenPanel p.num2 {
+    position: absolute;
+    background-color: black;
+    color: greenyellow;
+    top: -40px;
+    left: 10px;
+}
+
+.screenPanel p.num3 {
+    position: absolute;
+    background-color: black;
+    color: yellow;
+    top: -40px;
+    left: 10px;
+}
+
+.screenPanel p.choice {
     position: absolute;
     color: black;
     background-color: #f2f2f2;
