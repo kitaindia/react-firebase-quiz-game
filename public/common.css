@@ -109,7 +109,7 @@ input[type=text] {
     position: absolute;
     top: 0;
     left: 0;
-    width: 530px;
+    width: 400px;
     height: 400px;
     min-width: 100%;
     min-height: 100%;
@@ -177,6 +177,10 @@ input[type=text] {
 .selected {
     background-color: #FFE4C4;
     opacity: 1.0;
+}
+
+.unselected {
+    opacity: 0.1;
 }
 
 .selectedStep {

@@ -9,7 +9,7 @@ const number = (index) => {
 
 const ansRow = (answer, index) => {
     return (
-        <div className={"screenPanel ansBtn " + ((index + 1) % 2 === 1 ? 'fLeft ' : 'fRight ')}>
+        <div key={index} className={"screenPanel ansBtn " + ((index + 1) % 2 === 1 ? 'fLeft ' : 'fRight ')}>
             <img src={answer.image} alt={answer.text} />
             {number(index)}
             <p　className="choice">{answer.text}</p>
