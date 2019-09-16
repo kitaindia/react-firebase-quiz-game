@@ -100,8 +100,28 @@ input[type=text] {
 }
 
 .screenPanel {
+    position: relative;
     white-space: normal;
     height: 400px;
+}
+
+.screenPanel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 530px;
+    height: 400px;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: inherit;
+}
+
+.screenPanel p {
+    position: absolute;
+    color: black;
+    background-color: #f2f2f2;
+    top: 30%;
+    left: 15px;
 }
 
 .fLeft {

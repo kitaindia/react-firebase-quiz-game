@@ -2,18 +2,10 @@ import React, {Component} from 'react'
 
 const ansRow = (answer, index) => {
     return (
-        <input
-            className={
-                "screenPanel ansBtn " + ((index + 1) % 2 === 1 ? 'fLeft ' : 'fRight ')
-            }
-            key={index}
-            value={`${index + 1}. ${answer.text}`}
-            type="button"
-            style={{
-                backgroundImage: "url(" + answer.image + ")",
-                backgroundSize: "cover"
-            }}
-        />
+        <div className={"screenPanel ansBtn " + ((index + 1) % 2 === 1 ? 'fLeft ' : 'fRight ')}>
+            <img src={answer.image} alt={answer.text} />
+            <p　className="choice">{answer.text}</p>
+        </div>
     );
 }
 
