@@ -100,8 +100,60 @@ input[type=text] {
 }
 
 .screenPanel {
+    position: relative;
     white-space: normal;
     height: 400px;
+}
+
+.screenPanel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: inherit;
+}
+
+.screenPanel p.num0 {
+    position: absolute;
+    background-color: black;
+    color: cyan;
+    top: -40px;
+    left: 10px;
+}
+
+.screenPanel p.num1 {
+    position: absolute;
+    background-color: black;
+    color: red;
+    top: -40px;
+    left: 10px;
+}
+
+.screenPanel p.num2 {
+    position: absolute;
+    background-color: black;
+    color: greenyellow;
+    top: -40px;
+    left: 10px;
+}
+
+.screenPanel p.num3 {
+    position: absolute;
+    background-color: black;
+    color: yellow;
+    top: -40px;
+    left: 10px;
+}
+
+.screenPanel p.choice {
+    position: absolute;
+    color: black;
+    background-color: #f2f2f2;
+    top: 30%;
+    left: 15px;
 }
 
 .fLeft {
@@ -125,6 +177,10 @@ input[type=text] {
 .selected {
     background-color: #FFE4C4;
     opacity: 1.0;
+}
+
+.unselected {
+    opacity: 0.1;
 }
 
 .selectedStep {
